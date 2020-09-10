@@ -39,11 +39,11 @@ function main(){
 while [ True ];do
 
 
-    echo "序号 |       主机      | 说明"
+    echo "Num | Description | Server"
     underline
-    awk 'BEGIN {FS=":"} {printf("\033[0;31m% 3s \033[m | %15s | %s\n",$1,$2,$6)}' $direc/password.lst
+    awk 'BEGIN {FS=":"} {printf("\033[0;31m% 3s \033[m | %-10s | %16s\n",$1,$6,$2)}' $direc/password.lst
     underline
-    read -p '[*] 选择主机: ' number
+    read -p '[*] Select Num: ' number
     pw="$direc/password.lst"
     ipaddr=$(awk -v num=$number 'BEGIN {FS=":"} {if($1 == num) {print $2}}' $pw)
     port=$(awk -v num=$number 'BEGIN {FS=":"} {if($1 == num) {print $3}}' $pw)
