@@ -1,8 +1,4 @@
-# ssh 
-This is a SSH login tool
-
-![alt text](image/ssh-login-tool.png)
-
+# ssh login tool
 
 
 ## Run
@@ -23,13 +19,10 @@ index:IP:port:user:password:description
 ```
 alias s='bash /path/to/folder/ssh-login-tool/server_login.sh'
 ```
+4. type s in your terminal and login to your server
+
+![alt text](image/ssh-login-tool.png)
 
 
-
-### 二.配置
-- 密码文件配置:
-
-序号:IP:端口:用户:密码:说明
-1:192.168.88.128:22:root:toor:虚拟机web服务器
-
-- 密钥文件放在keys文件夹下,密码位置写成密钥文件名,文件名必须以.pem结尾
+## Note
+This repo is modified from https://github.com/ca0gu0/so
